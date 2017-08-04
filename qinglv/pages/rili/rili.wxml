@@ -16,26 +16,35 @@
 		
 		<block  wx:if="{{n[1]==cur_month}}">
 		<view  
-		class="dateView {{''+yue+''+index+''===z?'huang':''}}" data-y="{{yue}}" data-r="{{index}}" 
+		class="dateView {{''+yue+''+index+''==z?'huang':''}}" data-y="{{yue}}" data-r="{{index}}" data-cr="{{day[0].adultprice}}" data-et="{{day[0].childprice}}" data-yw="{{day[0].planreceive}}"
 		wx:for="{{n[6]}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction" wx:for-item="day">
 			<view class="datesView {{index == todayIndex ? 'zi' : ''}}">{{index+1}}</view>
 			<view class="jg" wx:if="{{day[0]}}">￥{{day[0].adultprice}}</view>
 			<view class="k" wx:else ></view>
 			<view class="yw" wx:if="{{day[0]}}">余位{{day[0].surplus}}</view>
-			<view class="k" wx:else>{{''+yue+''+index+''}}</view>
+			<view class="k" wx:else></view>
 		</view>
 		<!-- </block> -->
 		</block>
 		<block wx:else>
-		<view  class="dateView {{''+yue+''+index+''===z?'huang':''}}" wx:for="{{n[6]}}" data-y="{{yue}}"  data-r="{{index}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction">
+		<view  
+		class="dateView {{''+yue+''+index+''==z?'huang':''}}" data-y="{{yue}}" data-r="{{index}}" data-cr="{{item[0].adultprice}}" data-et="{{item[0].childprice}}" data-yw="{{item[0].planreceive}}"
+		wx:for="{{n[6]}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction" >
 			<view class="datesView">{{index+1}}</view>
 			<view class="jg" wx:if="{{item[0]}}">￥{{item[0].adultprice}}</view>
 			<view class="k" wx:else ></view>
 			<view class="yw" wx:if="{{item[0]}}">余位{{item[0].surplus}}</view>
-			<view class="k" wx:else>{{''+yue+''+index+''}}</view>
+			<view class="k" wx:else></view>
 		</view>
 		</block>
-		<view class="dateEmptyView" wx:for="{{n[5]}}" wx:key="{{index}}" data-idx="{{index}}">
+		<view class="dateEmptyView" wx:for="{{6}}" wx:key="{{index}}" data-idx="{{index}}">
 		</view>
 	</view>
 </block>
+<view>
+	<view>
+		<view>成人￥ {{}}</view>
+		<view>儿童￥ {{}}</view>
+	</view>
+	<view></view>
+</view>

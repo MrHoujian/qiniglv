@@ -3,7 +3,7 @@
 //var riLi= new Array();
 var app = getApp();
 var url=app.globalData.url;
-var riLi = [[], [], [],[],[]]
+var riLi = [[], [], []]
 Page({
   data: {
     hasEmptyGrid: false,
@@ -20,9 +20,13 @@ Page({
   dateSelectAction: function (e) {//日期选择
     var y = e.currentTarget.dataset.y;//下标天数
     var r = e.currentTarget.dataset.r;//下标天数
-    var z=y+r
-    console.log(''+y+''+r+'')
-    this.setData({z:z})
+    var cr =e.currentTarget.dataset.cr;
+    var et =e.currentTarget.dataset.et;
+    var yw =e.currentTarget.dataset.yw;
+    if(cr!==undefined){
+      var z=''+y+''+r+''
+      this.setData({z:z})
+    }
     //console.log(`点击的日期:${this.data.cur_year}年${this.data.cur_month}月${cur_day + 1}`);
   },
 
@@ -90,7 +94,7 @@ Page({
   jia: function () {
     var cur_year = this.data.cur_year;
     var cur_month = this.data.cur_month;
-    for(var i=1;i<5;i++){
+    for(var i=1;i<3;i++){
       cur_month+=1;
       if(cur_month>12){
         cur_year+=1;
