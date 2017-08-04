@@ -1,0 +1,9 @@
+.bigWrap{
+  background-color: #fff;
+}
+.ss-k{
+  margin-bottom: 0;
+}
+page{
+  background-color: #fff;
+}

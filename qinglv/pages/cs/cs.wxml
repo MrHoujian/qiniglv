@@ -1,0 +1,50 @@
+
+<!--index.wxml-->
+
+<!--<input placeholder="请输入城市名称或拼音" bindinput="inputEvent" />-->
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ss-k" id="ss-k">
+    <input class="ss" placeholder-style="color:#999" placeholder="搜索线路" />
+    <text>搜索</text>
+  </view>
+  <view class="mdd">
+
+    <!-- 热门目的地 -->
+
+     <view class="fl-bt">
+      <view class="bt huang">热门目的地</view>
+    </view>
+    <view class="fl-z">
+      <block wx:for="{{rm}}" wx:key="key">
+        <text>{{item.dd}}</text>
+      </block>
+    </view>
+
+    <!-- 分类跳转 -->
+    <view class="fl-bt">
+      <view class="bt huang">分类</view>
+    </view>
+    <view class="fl-z">
+      <block wx:for="{{fl}}">
+        <text class="" hover="true" hover-class="sidebar-item-hover" id=" {{item.id}}" bindtap="tapEvent">{{item.dd}}</text>
+      </block>
+    </view>
+
+    <!-- 分类 -->
+    <view class="fl-z">
+      <block wx:for="{{flk}}">
+        <block wx:if="{{item.type=='city'}}">
+          <text class="">{{item.city}}</text>
+        </block>
+        <block wx:else>
+          <view class="fl-bt" id="{{item.type}}">
+            <view class="bt huang">{{item.cs}}</view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </view>
+</scroll-view>
+
+<!--<button size="mini " bindtap="changeToView ">click me to scroll into view </button>
+    <button size="mini " bindtap="changeScrollTop ">click me to scroll</button>-->

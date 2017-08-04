@@ -1,0 +1,11 @@
+<view class="ss-k" id="ss-k">
+	<input class="ss" placeholder-style="color:#999" placeholder="搜索目的地信息" bindconfirm="textEnter" bindinput="getText" confirm-type="搜索"/>
+	<text bindtap="text">搜索</text>
+</view>
+<view class="zhibo-rm">
+	<text class="rm">热门</text>
+	<view class="mdd-z">
+		<view class="mdd-k" wx:for="{{city}}" wx:key="key" bindtap="zbtz" data-city="{{item}}">{{item}}</view>
+	</view>
+</view>
+

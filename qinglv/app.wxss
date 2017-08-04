@@ -1,0 +1,675 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page {
+  background-color: #ebebeb;
+  height: 100%;
+  font-family: "微软雅黑";
+  color: #333;
+}
+.bb-img{
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: space-between;
+}
+.page-header {
+  display: flex;
+  font-size: 32rpx;
+  color: #aaa;
+  margin-top: 50rpx;
+  flex-direction: column;
+  align-items: center;
+}
+.page-header-text {
+  padding: 20rpx 40rpx;
+}
+.page-header-line {
+  width: 150rpx;
+  height: 1px;
+  border-bottom: 1px solid #ccc; 
+}
+
+.page-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+.page-body-wrapper {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.page-body-wrapper form {
+  width: 100%;
+}
+.page-body-wording {
+  text-align: center;
+  padding: 200rpx 100rpx;
+}
+.page-body-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 50rpx;
+  width: 100%;
+  padding: 50rpx 0 150rpx 0;
+}
+.page-body-title {
+  margin-bottom: 100rpx;
+  font-size: 32rpx;
+}
+.page-body-text {
+  font-size: 30rpx;
+  line-height: 26px;
+  color: #ccc;
+}
+.page-body-text-small {
+  font-size: 24rpx;
+  color: #000;
+  margin-bottom: 100rpx;
+}
+.page-body-form {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #eee;
+}
+.page-body-form-item {
+  display: flex;
+  align-items: center;
+  margin-left: 30rpx;
+  border-bottom: 1px solid #eee;
+  height: 88rpx;
+  font-size: 34rpx;
+}
+.page-body-form-key {
+  width: 180rpx;
+  color: #000;
+}
+.page-body-form-value {
+  flex-grow: 1;
+}
+.page-body-form-value .input-placeholder {
+  color: #b2b2b2;
+}
+
+.page-body-form-picker {
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+  padding-right: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.page-body-form-picker-value {
+  color: #ccc;
+}
+
+.page-body-buttons {
+  width: 100%;
+}
+.page-body-button {
+  margin: 25rpx;
+}
+.page-body-button image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.page-footer {
+  text-align: center;
+  color: #1aad19;
+  font-size: 24rpx;
+  margin: 20rpx 0;
+}
+
+#green{
+    background-color: #09BB07;
+    height: 400rpx
+}
+#red{
+    background-color: #F76260;
+        height: 400rpx
+
+}
+#blue{
+    background-color: #10AEFF;
+        height: 400rpx
+
+}
+#yellow{
+    background-color: #FFBE00;
+        height: 400rpx
+
+}
+#gray{
+    background-color: #C9C9C9;
+        height: 400rpx
+
+}
+
+.strong{
+    font-weight: bold;
+}
+/*
+.bc_green{
+    background-color: #09BB07;
+}
+.bc_red{
+    background-color: #F76260;
+}
+.bc_blue{
+    background-color: #10AEFF;
+}
+.bc_yellow{
+    background-color: #FFBE00;
+}
+.bc_gray{
+    background-color: #C9C9C9;
+}*/
+
+.tc{
+    text-align: center;
+}
+
+.page input{
+    padding: 20rpx 30rpx;
+    background-color: #fff;
+}
+checkbox, radio{
+    margin-right: 10rpx;
+}
+
+.btn-area{
+    padding: 0 30px;
+}
+.btn-area button{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.page {
+    min-height: 100%;
+    flex: 1;
+    background-color: #FBF9FE;
+    font-size: 32rpx;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+    overflow: hidden;
+}
+.page__hd{
+    padding: 50rpx 50rpx 100rpx 50rpx;
+    text-align: center;
+}
+.page__title{
+    display: inline-block;
+    padding: 20rpx 40rpx;
+    font-size: 32rpx;
+    color: #AAAAAA;
+    border-bottom: 1px solid #CCCCCC;
+}
+.page__desc{
+    display: none;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: #BBBBBB;
+}
+
+/*top*/
+
+.zy-top {
+  background-color: #eb413d;
+  color: #fff;
+  padding: 0 30rpx 30rpx;
+  overflow: hidden;
+}
+
+.zy-bt {
+  font-size: 67rpx;
+  font-weight: bold;
+  display: block;
+  margin: 0rpx 0 10rpx;
+  letter-spacing: 3rpx;
+}
+
+.zy-fbt {
+  font-size: 28rpx;
+  letter-spacing: 3rpx;
+}
+
+.zy-ss {
+  width: 100%;
+  height: 60rpx;
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 10rpx 0;
+}
+
+.zy-dd {
+  width: 25%;
+  color: #ff7466;
+  border-right: 1px solid #e0e0e0;
+  height: 100%;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  display: inline-block;
+}
+
+.zy-dd image {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.zy-jss {
+  width: calc(75% - 20rpx);
+  display: inline-block;
+  color: #e0e0e0;
+  font-size: 30rpx;
+  padding-left: 15rpx;
+  line-height: 60rpx;
+}
+
+/*返回顶部*/
+.top{
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  bottom: 60rpx;
+  right: 60rpx;
+  z-index: 99;
+  background-color: rgba(240,240,240,1);
+    border: 1rpx solid #d9d9d9;
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 24rpx;
+    opacity: .8;
+
+}
+.top image{
+  width: 40rpx;
+}
+ /*颜色*/
+ .huang{
+  color:#F65314;
+ }
+ .lan{
+  color:#0CBB00;
+ }
+ /*线路搜索*/
+ .ss-k {
+  background-color: #eb413d;
+  overflow: hidden;
+  padding: 0 30rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40rpx;
+}
+
+.ss {
+  background-color: #fff;
+  border-radius: 0rpx;
+  height: 70rpx;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  width: calc(100% - 130rpx);
+}
+
+.ss-k text {
+  font-size: 35rpx;
+  line-height: 70rpx;
+  width: 100rpx;
+  text-align: right;
+  color: #fff;
+}
+
+.cf-cs {
+  background-color: #fff;
+  padding: 0 27rpx;
+  display: flex;
+  height: 96rpx;
+  justify-content: space-between;
+  line-height: 96rpx;
+  font-size: 30rpx;
+}
+
+.cf-cs image {
+  width: 52rpx;
+  position: relative;
+  top: 15rpx;
+  margin-right: 35rpx;
+}
+
+.gray {
+  color: #999;
+  margin-left: 30rpx;
+}
+
+.gray-bt {
+  color: #666;
+  font-size: 30rpx;
+  margin: 30rpx 40rpx;
+}
+
+.ss-z {
+  background-color: #fff;
+  padding: 0 27rpx;
+}
+
+.zj-cs {
+  background-color: #fff;
+  display: flex;
+  height: 96rpx;
+  justify-content: space-between;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  padding: 0 10rpx;
+}
+
+/*热门目的地*/
+.mdd {
+  background-color: #fff;
+  padding: 0rpx 30rpx;
+}
+
+.fl-bt {
+  width: 100%;
+  position: relative;
+  margin-bottom: 40rpx;
+  margin-top:70rpx;
+}
+
+.bt {
+  text-align: center;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding: 0 20rpx;
+  background-color:transparent;
+  margin: 0 auto;
+  position: relative;
+  z-index: 20
+}
+
+.fl-z {
+  /*display: flex;*/
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+  margin-bottom: 10rpx;
+}
+
+.fl-z text,.fl-z navigator{
+  display: inline-block;
+  padding: 20rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  border: 1rpx solid #e2e2e2;
+  width: 31%;
+  margin-bottom: 20rpx;
+  margin-right: 2.5%;
+}
+.fl-z navigator:nth-child(3n){
+  margin-right: 0;
+}
+.fl-z text:nth-child(3n){
+  margin-right: 0;
+}
+
+/*最近搜索*/
+
+.cf-cs {
+  background-color: #fff;
+  padding: 0 27rpx;
+  display: flex;
+  height: 96rpx;
+  justify-content: space-between;
+  line-height: 96rpx;
+  font-size: 30rpx;
+}
+
+.cf-cs image {
+  width: 52rpx;
+  position: relative;
+  top: 15rpx;
+  margin-right: 35rpx;
+}
+
+.gray {
+  color: #999;
+  margin-left: 30rpx;
+}
+
+.gray-bt {
+  color: #666;
+  font-size: 30rpx;
+  margin: 30rpx 40rpx;
+}
+
+.ss-z {
+  background-color: #fff;
+  padding: 0 27rpx;
+}
+
+.zj-cs {
+  background-color: #fff;
+  display: flex;
+  height: 96rpx;
+  justify-content: space-between;
+  line-height: 96rpx;
+  font-size: 30rpx;
+  padding: 0 10rpx;
+}
+
+/*线路块*/
+
+.xl-k {
+  background-color: #fff;
+  padding: 17rpx 36rpx 28rpx 22rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.xl-jg {
+  position: absolute;
+  color: #ff7d13;
+  right: 40rpx;
+  top: 40rpx;
+}
+
+.xl-tb {
+  display: flex;
+}
+
+.xl-tb image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 24rpx;
+}
+
+.dbt {
+  font-size: 30rpx;
+  color: #586c96;
+  margin-top: 12rpx;
+}
+
+.fbt {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 6rpx;
+}
+
+.xl-bt {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+
+.fz-xx {
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.fz-xx text {
+  margin-right: 20rpx;
+}
+
+.xl-dj {
+  color: #999;
+}
+
+.xl-zl {
+  color: #ed7793;
+}
+
+.xl-pf {
+  color: #099fde;
+}
+
+.xl-dp {
+  color: #4abb10;
+}
+.zhibo-tz image{
+  width:calc(33.33% - 6rpx);
+  margin-right: 8rpx;
+  margin-bottom: 9rpx;
+  height: 226rpx;
+  display: block;
+}
+.zhibo-tz image:nth-child(3n){
+  margin-right: 0;
+}
+.zhibo-tz{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+/* pages/xlsy/xlsy.wxss */
+.top{
+  margin-top: 40rpx;
+}
+.shaixuan-bt{
+  width:100%;
+  position: fixed;
+  bottom: 80rpx;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+.shaixuan-bt navigator{
+  display: inline-block;
+    width: 160px;
+    height: 40px;
+    line-height: 42px;
+    background-color: #fff;
+    border-radius: 80px;
+    color: #484848;
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.14);
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+    text-align: center;
+}
+.shaixuan-bt image{
+  width: 24rpx;
+  margin-left:20rpx; 
+  position: relative;
+  top: 5rpx
+}
+.gengduo{
+  font-size: 30rpx;
+  text-align: center;
+  color: #586c96;
+  height: 60rpx;
+  line-height: 40rpx
+}
+.gif{
+  display: block;
+  width: 200rpx;
+  margin:100rpx auto 0;
+}
+/*直播*/
+.zy-dd image{
+  position: relative;
+  bottom: 3rpx;
+}
+
+/*直播块*/
+.zhibo{
+  padding: 40rpx 26rpx 0;
+  margin-bottom:30rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.zhibo-xxz{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20rpx
+}
+.zhibo-tx{
+  width: 76rpx;
+  margin-right: 20rpx;
+}
+.zhibo-nc{
+  font-size: 28rpx;
+    color: #f46200;
+    display: block;
+}
+.zhibo-rq{
+  font-size: 20rpx;
+    color: #888;
+    margin-top: 6px;
+    display: block;
+}
+.zhibo-wz{
+  font-size: 28rpx;
+  display: block;
+    color: #333;
+    letter-spacing: 1rpx;
+    line-height: 1.5em;
+    margin-bottom: 30rpx;
+    text-align: justify;
+}
+.zhibo-tz image{
+  width:calc(33.33% - 6rpx);
+  margin-right: 8rpx;
+  margin-bottom: 9rpx;
+  height: 226rpx;
+  display: block;
+}
+.zhibo-tz image:nth-child(3n){
+  margin-right: 0;
+}
+.zhibo-tz{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+.zhibo-a{
+  color: #129bf0;
+    font-size: 26rpx;
+    margin: 30rpx 0;
+    display: block;
+}
+.zhibo-sp{
+  width: 100%;
+  margin-bottom: 25rpx
+}

@@ -1,0 +1,41 @@
+<view class="canlendarBgView">
+	<!-- 星期 -->
+	<view class="weekBgView">
+		<view class="weekView" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+	</view>
+</view>
+<view style="height: 80rpx"></view>
+
+
+<block wx:for="{{riLi}}" wx:key="key" wx:for-item="n" wx:for-index="yue">
+	<view class="dateBgView" >
+		<view class="centerView">{{n[0] || "--"}} 年 {{n[1] || "--"}} 月</view>
+
+		<view class="dateEmptyView" wx:for="{{n[5]}}" wx:key="{{index}}" data-idx="{{index}}">
+		</view>
+		
+		<block  wx:if="{{n[1]==cur_month}}">
+		<view  
+		class="dateView {{''+yue+''+index+''===z?'huang':''}}" data-y="{{yue}}" data-r="{{index}}" 
+		wx:for="{{n[6]}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction" wx:for-item="day">
+			<view class="datesView {{index == todayIndex ? 'zi' : ''}}">{{index+1}}</view>
+			<view class="jg" wx:if="{{day[0]}}">￥{{day[0].adultprice}}</view>
+			<view class="k" wx:else ></view>
+			<view class="yw" wx:if="{{day[0]}}">余位{{day[0].surplus}}</view>
+			<view class="k" wx:else>{{''+yue+''+index+''}}</view>
+		</view>
+		<!-- </block> -->
+		</block>
+		<block wx:else>
+		<view  class="dateView {{''+yue+''+index+''===z?'huang':''}}" wx:for="{{n[6]}}" data-y="{{yue}}"  data-r="{{index}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction">
+			<view class="datesView">{{index+1}}</view>
+			<view class="jg" wx:if="{{item[0]}}">￥{{item[0].adultprice}}</view>
+			<view class="k" wx:else ></view>
+			<view class="yw" wx:if="{{item[0]}}">余位{{item[0].surplus}}</view>
+			<view class="k" wx:else>{{''+yue+''+index+''}}</view>
+		</view>
+		</block>
+		<view class="dateEmptyView" wx:for="{{n[5]}}" wx:key="{{index}}" data-idx="{{index}}">
+		</view>
+	</view>
+</block>

@@ -1,0 +1,30 @@
+<!--pages/sx/sx.wxml-->
+<view class="px-bt">线路种类</view>
+<view class="px-z" >
+	<span data-num="1" class="{{num==1?'xz':''}}" bindtap="dx">跟团游</span>
+	<span data-num="2" class="{{num==2?'xz':''}}" bindtap="dx">目的地参团</span>
+	<span data-num="3" class="{{num==3?'xz':''}}" bindtap="dx">跟团游</span>
+	<span data-num="4" class="{{num==4?'xz':''}}" bindtap="dx">目的地参团</span>
+</view>
+
+<view class="px-bt">线路排序</view>
+<view class="px-z">
+	<span data-number="1" class="{{arry[0]==1?'xz':''}}" bindtap="ddx">销量升序</span>
+	<span data-number="2" class="{{arry[1]==2?'xz':''}}" bindtap="ddx">销量降序</span>
+	<span data-number="3" class="{{arry[2]==3?'xz':''}}" bindtap="ddx">时间升序</span>
+	<span data-number="4" class="{{arry[3]==4?'xz':''}}" bindtap="ddx">时间降序</span>
+</view>
+
+<view class="px-bt">供应商</view>
+<view class="px-z">
+	<span>徐州青年旅行社</span>
+	<span>云南假期</span>
+	<span>青旅行</span>
+	<span>徐州青年旅行社</span>
+	<span>云南假期</span>
+</view>
+
+<view class="button-wrapper">
+    <button type="" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="primary" class="qr"> 确认
+    </button>
+</view>

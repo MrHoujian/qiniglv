@@ -1,0 +1,9 @@
+/* pages/xlss/xlss.wxss */
+.gengduo {
+line-height:200rpx;
+}
+.gif{
+	display: block;
+	width: 200rpx;
+	margin:100rpx auto 0;
+}

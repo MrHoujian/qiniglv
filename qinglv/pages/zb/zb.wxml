@@ -1,0 +1,34 @@
+<!-- <scroll-view class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}"  style="position: absolute; left: 0; top:0; bottom: 0; right: 0;"> -->
+<view class="top" bindtap="goTop">
+  <image src="../../images/top.png" mode="widthFix"></image>
+</view>
+<view class="zy-top">
+  <text class="zy-bt">动态</text>
+  <text class="zy-fbt">目的地实时信息</text>
+  <view class="zy-ss">
+    <view class="zy-dd" bindtap="csxz">动态
+      <image src="../../images/zb.png" mode="widthFix"></image>
+    </view>
+    <view class="zy-jss" bindtap="zbss">搜索目的地信息</view>
+  </view>
+</view>
+<block wx:for="{{hiNoteList}}" wx:for-index="idx" wx:key="key">
+  <view class="zhibo">
+    <view class="zhibo-xxz">
+      <image src="{{item.user_headurl}}" alt="" mode="widthFix" class="zhibo-tx"></image>
+      <view class="zhibo-xx">
+        <text class="zhibo-nc">{{item.user_name}}</text>
+        <text class="zhibo-rq">{{item.date}}</text>
+      </view>
+    </view>
+    <text class="zhibo-wz" wx:if="{{item.content}}">{{item.content}}
+    </text>
+    <video wx:if="{{item.videourl}}" src="{{item.videourl}}" data-src="{{item.videourl}}" class="zhibo-sp" poster="{{item.videoheadurl}}"></video>
+    <view class="zhibo-tz" wx:if="{{item.imgList}}">
+      <image wx:for="{{item.imgList}}"  wx:key="key" src="{{item.downloadUrl}}" mode="aspectFill" data-src="{{item.downloadUrl}}" data-index="{{idx}}" bindtap="tptap"></image>
+    </view>
+    <navigator wx:if="{{item.route_id}}" url="../xq/xq?id={{item.route_id}}" class="zhibo-a">{{item.route_title}}</navigator>
+  </view>
+</block>
+<view wx:if="{{gengduo}}" class="gengduo">没有更多</view>
+<!-- </scroll-view> -->

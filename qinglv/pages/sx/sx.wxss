@@ -1,0 +1,41 @@
+/* pages/sx/sx.wxss */
+page{
+	background-color: #fff;
+}
+.px-bt{
+	font-size: 40rpx;
+	color:#f75a63;
+	font-weight: bold;
+	text-align: left;
+	padding:0 30rpx;
+	margin-top: 60rpx;
+	margin-bottom: 40rpx;
+}
+.px-z{
+	padding: 0 30rpx;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+
+}
+.px-z span{
+	width:calc(50% - 20rpx);
+	text-align: center;
+	font-size: 30rpx;
+	border: 1rpx solid #ededed;
+	padding: 20rpx 0;
+	margin-bottom: 20rpx;
+}
+.button-wrapper{
+	padding: 30rpx;
+	margin-top:60rpx;
+}
+.qr{
+	background-color: #f75a63;
+	color:#fff;
+}
+.px-z .xz{
+	border: 1rpx solid #f75a63;
+	color: #f75a63;
+}

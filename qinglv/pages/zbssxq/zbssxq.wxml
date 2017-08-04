@@ -1,0 +1,23 @@
+<block wx:for="{{hiNoteList}}" wx:for-index="idx" wx:key="key">
+  <view class="zhibo">
+    <view class="zhibo-xxz">
+      <image src="{{item.user_headurl}}" alt="" mode="widthFix" class="zhibo-tx"></image>
+      <view class="zhibo-xx">
+        <text class="zhibo-nc">{{item.user_name}}</text>
+        <text class="zhibo-rq">{{item.date}}</text>
+      </view>
+    </view>
+    <text class="zhibo-wz" wx:if="{{item.content}}">{{item.content}}
+    </text>
+    <video wx:if="{{item.videourl}}" src="{{item.videourl}}" data-src="{{item.videourl}}" class="zhibo-sp" poster="{{item.videoheadurl}}"></video>
+    <view class="zhibo-tz" wx:if="{{item.imgList}}">
+      <image wx:for="{{item.imgList}}"  wx:key="key" src="{{item.downloadUrl}}" mode="aspectFill" data-src="{{item.downloadUrl}}" data-index="{{idx}}" bindtap="tptap"></image>
+    </view>
+    <navigator wx:if="{{item.route_id}}" url="../xq/xq?id={{item.route_id}}" class="zhibo-a">{{item.route_title}}</navigator>
+  </view>
+</block>
+<view class="top" bindtap="goTop">
+  <image src="../../images/top.png" mode="widthFix"></image>
+</view>
+<image wx:if="{{gif}}" src="../../images/gif.gif" mode="widthFix" class="gif"></image>
+<view wx:if="{{gengduo}}" class="gengduo">未查询到相关管信息</view>

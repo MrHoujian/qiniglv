@@ -1,0 +1,51 @@
+  {
+  "pages": [
+    "pages/rili/rili",
+    "pages/index/index",
+    "pages/zbss/zbss",
+    "pages/zbssxq/zbssxq",
+    "pages/zb/zb",
+    "pages/sy/sy",
+    "pages/xlss/xlss",
+    "pages/xlsy/xlsy",
+    "pages/th/th",
+    "pages/csxz/csxz",
+    "pages/xq/xq",
+    "pages/sx/sx",
+    "pages/cs/cs",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb413d",
+    "navigationBarTitleText": "青旅行",
+    "navigationBarTextStyle": "whith",
+    "backgroundColor": "#ededed"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#F65B61",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/ea.png",
+        "selectedIconPath": "images/eb.png"
+      },
+      {
+        "pagePath": "pages/sy/sy",
+        "text": "目的地",
+        "iconPath": "images/da.png",
+        "selectedIconPath": "images/db.png"
+      },
+      {
+        "pagePath": "pages/zb/zb",
+        "text": "动态",
+        "iconPath": "images/ba.png",
+        "selectedIconPath": "images/bb.png"
+      }
+    ]
+  }
+}

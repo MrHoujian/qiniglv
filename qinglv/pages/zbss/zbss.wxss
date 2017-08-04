@@ -1,0 +1,28 @@
+/* pages/zbss/zbss.wxss */
+page{
+	background-color: #fff;
+}
+.ss-k{
+	margin-bottom: 0
+}
+
+.zhibo-rm{
+	padding: 40rpx 30rpx;
+}
+.rm{
+	display: block;
+	font-size: 34rpx;
+	margin-bottom: 30rpx
+}
+.mdd-z{
+	display: flex;
+}
+.mdd-k{
+	padding: 16rpx 20rpx;
+	border-radius: 8rpx;
+	background-color: #f1f1f1;
+	color: #888;
+	margin-right: 20rpx;
+	margin-bottom: 20rpx;
+	font-size:28rpx
+}

@@ -1,0 +1,66 @@
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<!--index.wxml-->
+<view class="zy-top">
+  <text class="zy-bt">青旅行</text>
+  <text class="zy-fbt">精选供应商 让旅行消费更透明</text>
+  <view class="zy-ss">
+    <view class="zy-dd" bindtap="csxz">{{city}}
+      <image src="../../images/xl.png" mode="widthFix"></image>
+    </view>
+    <view class="zy-jss" bindtap="mdd">搜索线路</view>
+  </view>
+</view>
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" indicator-active-color="#ffffff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="sy-swiper">
+  <block wx:for="{{carousels}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item.img_url}}" class="slide-image" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 图标tab -->
+<view class="tb-dh">
+  <block wx:for="{{tb}}" wx:key="key">
+    <view class="dh-k th-xl {{item.class}}">
+    <navigator url="{{item.url}}" open-type="{{item.type}}">
+      <image src="{{item.tbUrl}}" alt="" mode="widthFix"></image>
+      <text>{{item.tbBt}}</text>
+      </navigator>
+    </view>
+    
+  </block>
+</view>
+<!-- 广告图 -->
+<navigator url="/pages/th/th"><image src="{{ad.adImg_url}}" alt="" mode="widthFix" class="bb-img"></image></navigator>
+<!-- 滑动组 -->
+<view class="hd-z">
+  <view class="hd-bt">
+    <image mode="widthFix" src="../../images/hot.png"></image>{{ad.hdTitle}}</view>
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <block wx:for="{{slide}}" wx:key="key">
+      <view id="{{item.id}}" class="scroll-view-item_H bc_green">
+      <navigator url="../xq/xq?id={{item.routeId}}"  data-src="{{item.routeId}}">
+        <image src="{{item.route_img_url}}" mode="aspectFill"></image>
+        <view class="hd-jg">￥
+          <text>{{item.showPrice}}</text>起</view>
+        <view class="hd-xx">
+          <view class="xx-zbt">{{item.secondTitle}}</view>
+          <view class="xx-bt">{{item.shortTitle}}</view>
+        </view>
+      </navigator>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 线路列表 -->
+<view class="sy-bt">
+  <image src="../../images/hot.png" mode="widthFix"></image>{{ipts[0].product_name}}
+</view>
+ <import src="../../utils/moban.wxml"/>
+<block wx:for="{{ipts}}"  wx:key="key">
+  <template is="liebiao_route_id" data="{{item}}"/>
+</block>
+<view class="top" bindtap="goTop">
+  <image src="../../images/top.png" mode="widthFix"></image>
+</view>
+</scroll-view>

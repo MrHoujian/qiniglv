@@ -1,0 +1,40 @@
+<scroll-view class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}" style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+  <view class="com-widget-goTop" bindtap="goTop" wx:if="{{floorstatus}}">
+    <view class="icon-gotop">
+      <image src="../../images/top.png" mode="widthFix"></image>
+    </view>
+  </view>
+  <view class="cf-cs">
+    <view class="cf-k">
+      <image src="../../images/map.png" mode="widthFix"></image>
+      <text>当前出发城市</text>
+    </view>
+    <view class="gray">{{city}}</view>
+  </view>
+  <view class="ss-z">
+
+  </view>
+  <view class="gray-bt">全部出发城市</view>
+  <view class="ss-z">
+    <view class="zj-cs">
+      <view class="cf-k">
+        <text>{{city}}</text>
+      </view>
+      <view class="gray">来自定位</view>
+    </view>
+    <view class="hr"></view>
+    <block wx:for="{{chenshi}}" wx:key="key">
+      <view class="zj-cs" bindtap="xzCity" id="{{item.id}}" data-name="{{item.name}}">
+        <view class="cf-k">
+          <text>{{item.name}}</text>
+        </view>
+        <block  wx:if="{{item.id==xzCity}}">
+        <view class="gray">
+          <image src="../../images/dw.png" class="dw" mode="widthFix"></image>
+        </view>
+        </block>
+      </view>
+      <view class="hr"></view>
+    </block>
+  </view>
+</scroll-view>

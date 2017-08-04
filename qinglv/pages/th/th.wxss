@@ -1,0 +1,21 @@
+.zh-dh{
+	white-space: nowrap;
+	height: 98rpx;
+	margin-bottom: 20rpx;
+	background-color:#fff
+}
+.zh-dh view{
+	display: inline-block;
+	font-size: 32rpx;
+	padding:0 50rpx;
+	text-align: center;
+	height: 96rpx;
+	line-height: 96rpx;
+	background-color: #fff;
+	color: #999;
+	border-bottom: 2rpx solid #fff;
+}
+.zh-dh .xz-dh{
+	color: #eb413d;
+	border-bottom: 2rpx solid #eb413d;
+}

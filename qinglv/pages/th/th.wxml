@@ -1,0 +1,14 @@
+<scroll-view class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}"  style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+<view class="top" bindtap="goTop">
+  <image src="../../images/top.png" mode="widthFix"></image>
+</view>
+<scroll-view scroll-x="true" class="zh-dh">
+    <block wx:for="{{nav}}" wx:key="key"> 
+      <view data-num="{{item.showId}}" id="{{item.id}}" class="{{num==item.showId? 'xz-dh':''}}" bindtap="dx">{{item.title}}</view>
+    </block>
+ </scroll-view>
+ <import src="../../utils/moban.wxml"/>
+<block wx:for="{{routes}}"  wx:key="key">
+  <template is="liebiao_route_id" data="{{item}}"/>
+</block>
+</scroll-view>

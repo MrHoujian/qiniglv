@@ -1,0 +1,42 @@
+<template name="liebiao">
+	<navigator url="../xq/xq?id={{item.id}}">
+		<view class="xl-k">
+			<view class="xl-jg">￥{{item.showPrice}}</view>
+			<view class="xl-tb">
+				<image src="{{item.route_img_url}}" mode="aspectFill"></image>
+				<view>
+					<view class="dbt">{{item.shortTitle}}</view>
+					<view class="fbt">{{item.secondTitle}}</view>
+				</view>
+			</view>
+			<view class="xl-bt">{{item.longTitle}}</view>
+			<view class="fz-xx">
+				<text class="xl-dj">{{item.route_supplier_name}}{{item.supplierName}}</text>
+				<text class="xl-zl">{{item.props[0]}}</text>
+				<text class="xl-pf">{{item.reviewScore}}分</text>
+				<text class="xl-dp">{{item.reviewCount}}点评</text>
+			</view>
+		</view>
+	</navigator>
+</template>
+<template name="liebiao_route_id">
+	<navigator url="../xq/xq?id={{item.route_id}}">
+		<view class="xl-k">
+			<view class="xl-jg">￥{{item.showPrice}}</view>
+			<view class="xl-tb">
+				<image src="{{item.route_img_url}}" mode="aspectFill"></image>
+				<view>
+					<view class="dbt">{{item.shortTitle}}</view>
+					<view class="fbt">{{item.secondTitle}}</view>
+				</view>
+			</view>
+			<view class="xl-bt">{{item.longTitle}}</view>
+			<view class="fz-xx">
+				<text class="xl-dj">{{item.route_supplier_name}}{{item.supplierName}}</text>
+				<text class="xl-zl">{{item.props[0]}}</text>
+				<text class="xl-pf">{{item.reviewScore}}分</text>
+				<text class="xl-dp">{{item.reviewCount}}点评</text>
+			</view>
+		</view>
+	</navigator>
+</template>

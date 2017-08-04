@@ -1,0 +1,14 @@
+/* pages/csxz/csxz.wxss */
+.cf-cs{
+	margin-top:40rpx;
+}
+.dw{
+	width: 37rpx;
+	margin-right:30rpx;
+	position: relative;
+	top: 8rpx;
+}
+.hr{
+	height: 1rpx;
+	background-color: #f5f5f5;
+}

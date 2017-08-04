@@ -1,0 +1,16 @@
+
+<!--pages/xlsy/xlsy.wxml-->
+<!-- <scroll-view class="bigWrap" scroll-y="true" bindscrolltoupper="shuaxing" scroll-top="{{scrollTop}}" lower-threshold="1" bindscrolltolower="jiazai"  style="height: {{h}}px"> -->
+<image wx:if="{{gif}}" src="../../images/gif.gif" mode="widthFix" class="gif"></image>
+<import src="../../utils/moban.wxml"/>
+<block wx:for="{{list}}"  wx:key="key">
+  <template is="liebiao" data="{{item}}"/>
+</block>
+<view class="shaixuan-bt">
+  <navigator url="{{sx}}">出发地及筛选条件<image src="../../images/paixu.png" mode="widthFix"></image></navigator>
+</view>
+<view class="top" bindtap="goTop">
+  <image src="../../images/top.png" mode="widthFix"></image>
+</view>
+<!-- </scroll-view> -->
+<view wx:if="{{gengduo}}" class="gengduo">未查询到相关管信息</view>

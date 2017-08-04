@@ -1,0 +1,80 @@
+<!--pages/xq/xq.wxml-->
+<scroll-view class="bigWrap" scroll-y="true" scroll-top="{{scrollTop}}" style="position: absolute; left: 0; top:0; bottom: 0; right: 0;">
+	<!-- 头部 -->
+	<view class="head">
+		<image class="cpt" src="{{routeInfo.downloadUrl}}" mode="aspectFill"></image>
+		<view class="padding">
+			<text class="biaoti">{{routeInfo.longTitle}}</text>
+			<text class="fuwen">发团周期<text class="biaozhu">{{routeInfo.groupTime}}</text>线路编号<text class="biaozhu">{{routeInfo.routeNum}}</text></text>
+			<text class="fuwen">{{routeInfo.routeNum}}</text>
+			<text class="jiage">￥{{routeInfo.showPrice}}</text>
+		</view>
+	</view>
+	<!-- 优惠 -->
+	<view class="youhui" bindtap="kq">
+		<image src="../../images/youhui.png" class="youhui-tb" mode="widthFix"></image>
+		{{routeInfo.routeCoupons[0].count}}人预定立减{{routeInfo.routeCoupons[0].money}}<image src="../../images/more.png" class="youhui-tb" mode="widthFix"></image>
+	</view>
+	<view class="youhui-bj" wx:if="{{yh}}">
+		<view class="youhui-k">
+			<view class="youhui-bt">优惠信息<image class="youhui-ico" src="../../images/del.png" mode="widthFix" bindtap="gb"></image></view>
+			<block wx:for="{{routeInfo.routeCoupons}}"  wx:key="key">
+				<view class="youhui-t">{{item.count}}人预定立减{{item.money}}</view>
+			</block>
+		</view>
+	</view>
+	<!-- top -->
+	<view class="top" bindtap="goTop">
+		<image src="../../images/top.png" mode="widthFix"></image>
+	</view>
+	<!-- 店铺 -->
+	<view class="dianpu">
+		<image src="{{routeInfo.downloadUrlSmall}}" mode="aspectFill"></image>
+		<view>
+			<text>{{routeInfo.shopName}}</text>
+			<text>{{routeInfo.firmName}}</text>
+		</view>
+	</view>
+
+	
+	<text class="xq-bt">优惠活动</text>
+
+	<view class="xq-zw"><rich-text nodes="{{routeInfo.routeSell}}" bindtap="tap"></rich-text></view>
+
+	<text class="xq-bt bai">行程介绍</text>
+	<block wx:for="{{routeInfo.routeDayTitle}}" wx:key="rd_id" wx:for-index='rd'>
+		<view class="xingcheng-btk">
+			<view class="xingcheng-bt">第{{rd+1}}天</view>
+			<view class="xingcheng-bt">{{item.rd_dayTitle}}</view>
+		</view>
+		
+			<block wx:for="{{item.routeTitleContent}}" wx:key="tc_id">
+				<view class="xiangcheng-k {{index%2?'xz':''}}" data-a="{{index}}1">
+				<view class="xingcheng-bt">{{item.tc_title}} </view>
+
+				<view class="xingcheng-zw">
+					<rich-text nodes="{{item.tc_content}}" bindtap="tap"></rich-text>
+				</view>
+				<view class="zhibo-tz" wx:if="{{item.routeImg.length>1}}">
+					<image wx:for="{{item.routeImg}}" wx:key="id" src="{{item.downloadUrl}}" data-src="{{item.downloadUrl}}" data-tcid="{{item.tc_id}}" mode="aspectFill" bindtap="tptap"></image>
+				</view>
+				</view>
+			</block>
+	</block>
+
+	<view class="gaocha"></view>
+	<view class="but">
+		<view>
+			<contact-button 
+			type="default-light" 
+			size="50"
+			session-from="weapp"
+			style="opacity:0;position:absolute;height:100%;width:15%;left: 0">
+		</contact-button>
+		<image src="../../images/weixin.png" mode="widthFix"></image><text>客服</text></view>
+		<view><image src="../../images/dianpu.png" mode="widthFix"></image><text>店铺</text></view>
+		<view><image src="../../images/shoucang.png" mode="widthFix"></image><text>收藏</text></view>
+		<view><image src="../../images/rili.png" mode="widthFix"></image><text>团期</text></view>
+		<view class="yunding">立即预定</view> 
+	</view>
+</scroll-view>

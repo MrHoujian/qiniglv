@@ -1,0 +1,60 @@
+
+<!--index.wxml-->
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="ss-k" id="ss-k">
+    <input class="ss" placeholder-style="color:#999" placeholder="搜索线路" bindconfirm="textEnter" bindinput="getText" confirm-type="搜索"/>
+    <text bindtap="text">搜索</text>
+  </view>
+  <view class="mdd">
+
+    <!-- 热门目的地 -->
+
+     <view class="fl-bt">
+      <view class="bt huang">热门目的地</view>
+    </view>
+    <view class="fl-z">
+      <block wx:for="{{hot.second[1]}}" wx:key="key">
+        <navigator url="../xlsy/xlsy?provinceId={{provinceId}}&secName={{item}}">{{item}}</navigator>
+      </block>
+    </view>
+
+    <!-- 分类跳转 -->
+    <view class="fl-bt">
+      <view class="bt huang">分类</view>
+    </view>
+    <view class="fl-z">
+      <block wx:for="{{hot.first}}" wx:key="key">
+        <text class="" hover="true" hover-class="sidebar-item-hover"  data-tiao="a{{item.id}}" bindtap="tapEvent">{{item.name}}</text>
+      </block>
+    </view>
+
+    <!-- 分类 -->
+    
+      <block wx:for="{{hot.first}}" wx:key="key">
+        <view class="fl-bt" id="a{{item.id}}">
+            <view class="bt huang">{{item.name}}</view>
+        </view>
+        <view class="fl-z">
+        <block wx:for="{{hot.second[index+1]}}" wx:key="key">
+        <navigator url="../xlsy/xlsy?provinceId={{provinceId}}&secName={{item}}">{{item}}</navigator>
+        </block>
+        </view>
+      </block>
+    
+    <!-- <view class="fl-z">
+      <block wx:for="{{hot.first}}">
+        <block wx:if="{{item.type=='city'}}">
+          <text class="">{{item.city}}</text>
+        </block>
+        <block wx:else>
+          <view class="fl-bt" id="{{item.type}}">
+            <view class="bt huang">{{item.cs}}</view>
+          </view>
+        </block>
+      </block>
+    </view> -->
+  </view>
+  <view class="top" bindtap="goTop">
+  <image src="../../images/top.png" mode="widthFix"></image>
+</view>
+</scroll-view>
